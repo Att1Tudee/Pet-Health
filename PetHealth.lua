@@ -5,6 +5,7 @@ PetHealth = PetHealth or {}
 PetHealth.supportedClasses = {
 	[2] = true,	-- Sorcerer
 	[4] = true, -- Warden
+	[5] = true, -- Necromancer
 }
 local addon = {
 	name 			= "PetHealth",
@@ -159,6 +160,9 @@ local validPets = {
 	-- Wild Guardian
 	[GetPetNameLower(85990)] = true,
 	["дикий защитник"] = true, -- ru
+	-- Necromancer
+	-- Spirit guardian
+	[GetPetNameLower(118913)] = true,
 }
 
 local function IsUnitValidPet(unitTag)
