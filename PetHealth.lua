@@ -377,6 +377,9 @@ local function OnHealthUpdate(_, unitTag, _, _, powerValue, powerMax, initial)
 		return
 	elseif i == 1 then
 		local petOne = currentPets[1].unitName
+		if powerValue == 0 then
+			ChatOutput(string.format("Health is 0, pet should reset to pet1")) -- health 0 state triggers here
+		end	
 		if lowHealthAlertPercentage > 1 and powerValue ~= 0 and powerValue < (powerMax*.01*lowHealthAlertPercentage) then
 			if onScreenHealthAlertPetOne == 0 then
 				OnScreenMessage(zo_strformat("|cff0000<<1>> <<2>>|r", petOne, GetString(SI_PET_HEALTH_LOW_HEALTH_WARNING_MSG)))
