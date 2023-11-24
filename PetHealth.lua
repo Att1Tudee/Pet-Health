@@ -161,8 +161,12 @@ local validPets = {
 	[GetPetNameLower(85990)] = true,
 	["дикий защитник"] = true, -- ru
 	-- Necromancer
+	-- Spirit mender
+	[GetPetNameLower(115732)] = true,
 	-- Spirit guardian
 	[GetPetNameLower(118913)] = true,
+	-- Intensive mender
+	[GetPetNameLower(118843)] = true,
 }
 
 local function IsUnitValidPet(unitTag)
